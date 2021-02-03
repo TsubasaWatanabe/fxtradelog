@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  entry_datetime: 2021-02-03 12:49:12
+  entry_price: 1.5
+  position: MyString
+  expected_profit: 1.5
+  expected_profit_pips: 1.5
+  loss_cut: 1.5
+  loss_cut_pips: 1.5
+  currency_pair: MyString
+  lot: 1.5
+  entry_memo: MyText
+  exit_datetime: 2021-02-03 12:49:12
+  exit_price: 1.5
+  exit_memo: MyText
+  profit_and_loss: 1.5
+  profit_and_loss_pips: 1.5
+
+two:
+  user: two
+  entry_datetime: 2021-02-03 12:49:12
+  entry_price: 1.5
+  position: MyString
+  expected_profit: 1.5
+  expected_profit_pips: 1.5
+  loss_cut: 1.5
+  loss_cut_pips: 1.5
+  currency_pair: MyString
+  lot: 1.5
+  entry_memo: MyText
+  exit_datetime: 2021-02-03 12:49:12
+  exit_price: 1.5
+  exit_memo: MyText
+  profit_and_loss: 1.5
+  profit_and_loss_pips: 1.5

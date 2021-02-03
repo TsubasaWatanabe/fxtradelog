@@ -1,0 +1,21 @@
+header {
+  margin: 0 auto;
+}
+.navbar {
+  background-color: #EAD9FF;
+  height: 55px;
+  margin: 0 auto;
+}
+.nav-item {
+  text-align: center;
+}
+.navbar a{
+  color: #fff;
+}
+.navbar a:hover {
+  background-color: #BA55D3;
+}
+.navbar-brand {
+  color: #800080 !important;
+  font-weight: bold; 
+}

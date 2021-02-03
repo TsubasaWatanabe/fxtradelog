@@ -1,0 +1,92 @@
+<%= form_with(model: trade, local: true) do |form| %>
+  <% if trade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trade.errors.count, "error") %> prohibited this trade from being saved:</h2>
+
+      <ul>
+      <% trade.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :entry_datetime %>
+    <%= form.datetime_select :entry_datetime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exit_datetime %>
+    <%= form.datetime_select :exit_datetime %>
+  </div>
+
+  <div class="field">
+    <%= form.label :entry_price %>
+    <%= form.text_field :entry_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position %>
+    <%= form.text_field :position %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expected_profit %>
+    <%= form.text_field :expected_profit %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expected_profit_pips %>
+    <%= form.text_field :expected_profit_pips %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loss_cut %>
+    <%= form.text_field :loss_cut %>
+  </div>
+
+  <div class="field">
+    <%= form.label :loss_cut_pips %>
+    <%= form.text_field :loss_cut_pips %>
+  </div>
+
+  <div class="field">
+    <%= form.label :currency_pair %>
+    <%= form.text_field :currency_pair %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lot %>
+    <%= form.text_field :lot %>
+  </div>
+
+  <div class="field">
+    <%= form.label :entry_memo %>
+    <%= form.text_area :entry_memo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exit_price %>
+    <%= form.text_field :exit_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exit_memo %>
+    <%= form.text_area :exit_memo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :profit_and_loss %>
+    <%= form.text_field :profit_and_loss %>
+  </div>
+
+  <div class="field">
+    <%= form.label :profit_and_loss_pips %>
+    <%= form.text_field :profit_and_loss_pips %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

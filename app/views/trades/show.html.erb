@@ -1,0 +1,84 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @trade.user %>
+</p>
+
+<p>
+  <strong>Entry datetime:</strong>
+  <%= @trade.entry_datetime %>
+</p>
+
+<p>
+  <strong>Entry price:</strong>
+  <%= @trade.entry_price %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @trade.position %>
+</p>
+
+<p>
+  <strong>Expected profit:</strong>
+  <%= @trade.expected_profit %>
+</p>
+
+<p>
+  <strong>Expected profit pips:</strong>
+  <%= @trade.expected_profit_pips %>
+</p>
+
+<p>
+  <strong>Loss cut:</strong>
+  <%= @trade.loss_cut %>
+</p>
+
+<p>
+  <strong>Loss cut pips:</strong>
+  <%= @trade.loss_cut_pips %>
+</p>
+
+<p>
+  <strong>Currency pair:</strong>
+  <%= @trade.currency_pair %>
+</p>
+
+<p>
+  <strong>Lot:</strong>
+  <%= @trade.lot %>
+</p>
+
+<p>
+  <strong>Entry memo:</strong>
+  <%= @trade.entry_memo %>
+</p>
+
+<p>
+  <strong>Exit datetime:</strong>
+  <%= @trade.exit_datetime %>
+</p>
+
+<p>
+  <strong>Exit price:</strong>
+  <%= @trade.exit_price %>
+</p>
+
+<p>
+  <strong>Exit memo:</strong>
+  <%= @trade.exit_memo %>
+</p>
+
+<p>
+  <strong>Profit and loss:</strong>
+  <%= @trade.profit_and_loss %>
+</p>
+
+<p>
+  <strong>Profit and loss pips:</strong>
+  <%= @trade.profit_and_loss_pips %>
+</p>
+
+<%= link_to 'Edit', edit_trade_path(@trade) %> |
+<%= link_to 'Back', trades_path %>
