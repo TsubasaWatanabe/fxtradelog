@@ -1,11 +1,6 @@
 class TradesController < ApplicationController
   before_action :set_trade, only: %i[ show edit update destroy ]
 
-  # GET /trades or /trades.json
-  def index
-    @trades = Trade.all
-  end
-
   # GET /trades/1 or /trades/1.json
   def show
   end
@@ -21,7 +16,7 @@ class TradesController < ApplicationController
 
   # POST /trades or /trades.json
   def create
-    @trade = Trade.new(trade_params)
+    @trade = current_user.trades.build(trade_params)
 
     respond_to do |format|
       if @trade.save
@@ -64,6 +59,6 @@ class TradesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def trade_params
-      params.require(:trade).permit(:user_id, :entry_datetime, :entry_price, :position, :expected_profit, :expected_profit_pips, :loss_cut, :loss_cut_pips, :currency_pair, :lot, :entry_memo, :exit_datetime, :exit_price, :exit_memo, :profit_and_loss, :profit_and_loss_pips)
+      params.require(:trade).permit(:entry_datetime, :entry_price, :position, :expected_profit, :expected_profit_pips, :loss_cut, :loss_cut_pips, :currency_pair, :lot, :entry_memo, :exit_datetime, :exit_price, :exit_memo, :profit_and_loss, :profit_and_loss_pips)
     end
 end

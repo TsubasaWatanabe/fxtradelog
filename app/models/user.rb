@@ -6,4 +6,5 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
     has_secure_password
     validates :password_confirmation, presence: true, length: { maximum: 50 }
+    has_many :trades
 end

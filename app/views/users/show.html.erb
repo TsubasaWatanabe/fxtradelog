@@ -1,8 +1,8 @@
+<h1>ユーザー情報</h1>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
+  <strong>Name:</strong><%= @user.name %>
 </p>
 
 <p>
@@ -11,9 +11,20 @@
 </p>
 
 <p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
+<%= link_to '登録情報変更', edit_user_path(@user), class: 'btn btn-primary'  %>
 </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<br>
+<br>
+
+<h1>FXトレードログ</h1>
+<p>
+<%= link_to 'ログ新規作成', new_trade_path(), class: 'btn btn-primary'  %>
+</p>
+
+<ul>
+  <% @trades.each do |trade| %>
+    <% linkstr = trade.entry_datetime.to_s + '（' + trade.currency_pair.to_s + '）' %>
+    <li><%= link_to linkstr, trade_path() %></li>
+  <% end %>
+</ul>
