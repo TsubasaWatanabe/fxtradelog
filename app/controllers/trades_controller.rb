@@ -1,4 +1,5 @@
 class TradesController < ApplicationController
+  before_action :correct_user, only: %i[ show edit update destroy ]
   before_action :set_trade, only: %i[ show edit update destroy ]
 
   # GET /trades/1 or /trades/1.json
@@ -52,6 +53,14 @@ class TradesController < ApplicationController
   end
 
   private
+
+  def correct_user
+    @trades = current_user.trades.find_by(id: params[:id])
+    unless @trades
+      redirect_to root_url
+    end
+  end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_trade
       @trade = Trade.find(params[:id])
