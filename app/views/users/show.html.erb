@@ -1,12 +1,12 @@
-<h1>ユーザー情報</h1>
+<h2>ユーザー情報</h2>
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong><%= @user.name %>
+  <strong>Name：</strong><%= @user.name %>
 </p>
 
 <p>
-  <strong>Email:</strong>
+  <strong>Email：</strong>
   <%= @user.email %>
 </p>
 
@@ -17,7 +17,7 @@
 <br>
 <br>
 
-<h1>FXトレードログ</h1>
+<h2>FXトレードログ</h2>
 <p>
 <%= link_to 'ログ新規作成', new_trade_path(), class: 'btn btn-primary'  %>
 </p>
