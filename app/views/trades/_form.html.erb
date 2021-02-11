@@ -12,81 +12,71 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :entry_datetime %>
+    <%= form.label :entry_datetime, "▼エントリー日時" %>
     <%= form.datetime_select :entry_datetime %>
   </div>
-
+  <br>
   <div class="field">
-    <%= form.label :exit_datetime %>
+    <%= form.label :exit_datetime, "▼決済日時" %>
     <%= form.datetime_select :exit_datetime %>
   </div>
+  <br>
+  <div class="field">
+    <%= form.label :currency_pair, "▼通貨ペア" %>
+    <%= form.text_field :currency_pair %>　　　
+    <%= form.radio_button :position, :long %>
+    <%= form.label :position, "ロング　", {value: :long, style: "display: inline-block;"} %>
+    <%= form.radio_button :position, :short %>
+    <%= form.label :position, "ショート", {value: :short, style: "display: inline-block;"} %>
+  </div>
 
   <div class="field">
-    <%= form.label :entry_price %>
+    <%= form.label :entry_price, "▼エントリーレート" %>
     <%= form.text_field :entry_price %>
   </div>
-
+  
   <div class="field">
-    <%= form.label :position %>
-    <%= form.text_field :position %>
+    <%= form.label :expected_profit, "▼利益確定予定レート" %>
+    <%= form.text_field :expected_profit %>（※レート入力）　　　
+    <%= form.text_field :expected_profit_pips %>　pips
   </div>
 
   <div class="field">
-    <%= form.label :expected_profit %>
-    <%= form.text_field :expected_profit %>
   </div>
 
   <div class="field">
-    <%= form.label :expected_profit_pips %>
-    <%= form.text_field :expected_profit_pips %>
+    <%= form.label :loss_cut, "▼損切予定レート" %>
+    <%= form.text_field :loss_cut %>（※レート入力）　　　
+    <%= form.text_field :loss_cut_pips %>　pips
   </div>
 
   <div class="field">
-    <%= form.label :loss_cut %>
-    <%= form.text_field :loss_cut %>
+    <%= form.label :lot, "▼取引数量（lot）" %>
+    <%= form.text_field :lot %>　万通貨
   </div>
 
   <div class="field">
-    <%= form.label :loss_cut_pips %>
-    <%= form.text_field :loss_cut_pips %>
-  </div>
-
-  <div class="field">
-    <%= form.label :currency_pair %>
-    <%= form.text_field :currency_pair %>
-  </div>
-
-  <div class="field">
-    <%= form.label :lot %>
-    <%= form.text_field :lot %>
-  </div>
-
-  <div class="field">
-    <%= form.label :entry_memo %>
+    <%= form.label :entry_memo, "▼エントリー時の分析内容" %>
     <%= form.text_area :entry_memo %>
   </div>
 
   <div class="field">
-    <%= form.label :exit_price %>
+    <%= form.label :exit_price, "▼決済レート" %>
     <%= form.text_field :exit_price %>
   </div>
 
   <div class="field">
-    <%= form.label :exit_memo %>
+    <%= form.label :profit_and_loss, "▼損益" %>
+    <%= form.text_field :profit_and_loss %>　円　　　
+    <%= form.text_field :profit_and_loss_pips %>　pips
+  </div>
+
+  <div class="field">
+    <%= form.label :exit_memo, "▼取引振り返り" %>
     <%= form.text_area :exit_memo %>
   </div>
 
-  <div class="field">
-    <%= form.label :profit_and_loss %>
-    <%= form.text_field :profit_and_loss %>
-  </div>
-
-  <div class="field">
-    <%= form.label :profit_and_loss_pips %>
-    <%= form.text_field :profit_and_loss_pips %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class"actions row">
+    <%= form.submit '作成', class: 'btn btn-primary btn-block btn-size' %>
   </div>
 <% end %>

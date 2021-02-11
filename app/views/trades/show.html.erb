@@ -1,78 +1,85 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Entry datetime:</strong>
+  <strong>▼エントリー日時</strong>
+</p>
+<p>
   <%= @trade.entry_datetime %>
+</p>
+<p>
+  <strong>▼決済日時</strong>
+</p>
+<p>
+  <%= @trade.exit_datetime %>
+</p>
+<p>
+  <strong>▼通貨ペア</strong>
+</p>
+<p>
+  <%= @trade.currency_pair %>
+  （<%= @trade.position %>）
 </p>
 
 <p>
-  <strong>Entry price:</strong>
+  <strong>▼エントリーレート</strong>
+</p>
+<p>
   <%= @trade.entry_price %>
 </p>
 
 <p>
-  <strong>Position:</strong>
-  <%= @trade.position %>
+  <strong>▼利益確定予定レート</strong>
 </p>
-
 <p>
-  <strong>Expected profit:</strong>
   <%= @trade.expected_profit %>
+  （<%= @trade.expected_profit_pips %>　pips）
 </p>
 
 <p>
-  <strong>Expected profit pips:</strong>
-  <%= @trade.expected_profit_pips %>
+  <strong>▼損切予定レート</strong>
 </p>
-
 <p>
-  <strong>Loss cut:</strong>
   <%= @trade.loss_cut %>
+  （<%= @trade.loss_cut_pips %>　pips）
 </p>
 
 <p>
-  <strong>Loss cut pips:</strong>
-  <%= @trade.loss_cut_pips %>
+  <strong>▼取引数量（lot）</strong>
+</p>
+<p>
+  <%= @trade.lot %>　万通貨
 </p>
 
 <p>
-  <strong>Currency pair:</strong>
-  <%= @trade.currency_pair %>
+  <strong>▼エントリー時の分析内容</strong>
 </p>
-
 <p>
-  <strong>Lot:</strong>
-  <%= @trade.lot %>
-</p>
-
-<p>
-  <strong>Entry memo:</strong>
   <%= @trade.entry_memo %>
 </p>
 
 <p>
-  <strong>Exit datetime:</strong>
-  <%= @trade.exit_datetime %>
+  <strong>▼決済レート</strong>
 </p>
-
 <p>
-  <strong>Exit price:</strong>
   <%= @trade.exit_price %>
 </p>
 
 <p>
-  <strong>Exit memo:</strong>
+  <strong>▼損益</strong>
+</p>
+<p>
+  <%= @trade.profit_and_loss %>　円
+  （<%= @trade.profit_and_loss_pips %>　pips）
+</p>
+
+<p>
+  <strong>▼取引振り返り</strong>
+</p>
+<p>
   <%= @trade.exit_memo %>
 </p>
 
-<p>
-  <strong>Profit and loss:</strong>
-  <%= @trade.profit_and_loss %>
-</p>
+<div>
+  <%= link_to '修正', edit_trade_path(@trade) %>
+</div>
 
-<p>
-  <strong>Profit and loss pips:</strong>
-  <%= @trade.profit_and_loss_pips %>
-</p>
-
-<%= link_to '修正', edit_trade_path(@trade) %>
