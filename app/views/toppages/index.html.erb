@@ -1,7 +1,9 @@
 <div class="center jumbotron">
   <div class="text-center">
     <h1>Welcome to the FX Trade Log</h1>
-    <%= link_to 'ユーザー新規登録', signup_path, class: 'btn btn-primary link-signup' %>
+    <% unless logged_in? %>
+      <%= link_to 'ユーザー新規登録', signup_path, class: 'btn btn-primary link-signup' %>
+    <% end %>
 </div>
 </div>
 <div class="text-center">
