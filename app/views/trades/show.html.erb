@@ -1,85 +1,29 @@
-<p id="notice"><%= notice %></p>
+<h3>[トレード内容]</h3>
+<table border="2">
 
-<p>
-  <strong>▼エントリー日時</strong>
-</p>
-<p>
-  <%= @trade.entry_datetime %>
-</p>
-<p>
-  <strong>▼決済日時</strong>
-</p>
-<p>
-  <%= @trade.exit_datetime %>
-</p>
-<p>
-  <strong>▼通貨ペア</strong>
-</p>
-<p>
-  <%= @trade.currency_pair %>
-  （<%= @trade.position %>）
-</p>
+  <tr><th>エントリー日時</th><td><%= @trade.entry_datetime %></td></tr>
 
-<p>
-  <strong>▼エントリーレート</strong>
-</p>
-<p>
-  <%= @trade.entry_price %>
-</p>
+  <tr><th>決済日時</th><td><%= @trade.exit_datetime %></td></tr>
 
-<p>
-  <strong>▼利益確定予定レート</strong>
-</p>
-<p>
-  <%= @trade.expected_profit %>
-  （<%= @trade.expected_profit_pips %>　pips）
-</p>
+  <tr><th>通貨ペア</th><td><%= @trade.currency_pair %>（<%= @trade.position %>）</td></tr>
 
-<p>
-  <strong>▼損切予定レート</strong>
-</p>
-<p>
-  <%= @trade.loss_cut %>
-  （<%= @trade.loss_cut_pips %>　pips）
-</p>
+  <tr><th>エントリーレート</th><td><%= @trade.entry_price %></td></tr>
 
-<p>
-  <strong>▼取引数量（lot）</strong>
-</p>
-<p>
-  <%= @trade.lot %>　万通貨
-</p>
+  <tr><th>利益確定予定レート</th><td><%= @trade.expected_profit %>（<%= @trade.expected_profit_pips %>pips）</td></tr>
 
-<p>
-  <strong>▼エントリー時の分析内容</strong>
-</p>
-<p>
-  <%= @trade.entry_memo %>
-</p>
+  <tr><th>損切予定レート</th><td><%= @trade.loss_cut %>（<%= @trade.loss_cut_pips %>pips）</td></tr>
 
-<p>
-  <strong>▼決済レート</strong>
-</p>
-<p>
-  <%= @trade.exit_price %>
-</p>
+  <tr><th>取引数量（lot）</th><td><%= @trade.lot %>万通貨</td></tr>
 
-<p>
-  <strong>▼損益</strong>
-</p>
-<p>
-  <%= @trade.profit_and_loss %>　円
-  （<%= @trade.profit_and_loss_pips %>　pips）
-</p>
+  <tr><th>エントリー時の分析内容</th><td><%= @trade.entry_memo %></td></tr>
 
-<p>
-  <strong>▼取引振り返り</strong>
-</p>
-<p>
-  <%= @trade.exit_memo %>
-</p>
+  <tr><th>決済レート</th><td><%= @trade.exit_price %></td></tr>
+  <tr><th>損益</th><td> <%= @trade.profit_and_loss %>円（<%= @trade.profit_and_loss_pips %>pips）</td></tr>
+  <tr><th>取引振り返り</th><td><%= @trade.exit_memo %></td></tr>
 
+</table>
+<br>
 <div>
-  <%= link_to '修正', edit_trade_path(@trade) %>
+  <%= link_to '修正する', edit_trade_path(@trade) %>
 </div>
 
