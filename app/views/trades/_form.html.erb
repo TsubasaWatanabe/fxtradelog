@@ -23,10 +23,10 @@
   <br>
   <div class="field">
     <%= form.label :currency_pair, "▼通貨ペア" %>
-    <%= form.text_field :currency_pair %>　　　
-    <%= form.radio_button :position, :long %>
+    <%= form.text_field :currency_pair %>　　
+    <%= form.radio_button :position, "ロング" %>
     <%= form.label :position, "ロング　", {value: :long, style: "display: inline-block;"} %>
-    <%= form.radio_button :position, :short %>
+    <%= form.radio_button :position, "ショート" %>
     <%= form.label :position, "ショート", {value: :short, style: "display: inline-block;"} %>
   </div>
 
@@ -57,7 +57,7 @@
 
   <div class="field">
     <%= form.label :entry_memo, "▼エントリー時の分析内容" %>
-    <%= form.text_area :entry_memo %>
+    <%= form.text_area :entry_memo, size: "70x5" %>
   </div>
 
   <div class="field">
@@ -71,12 +71,12 @@
     <%= form.text_field :profit_and_loss_pips %>　pips
   </div>
 
-  <div class="field">
+  <div class="field text-block">
     <%= form.label :exit_memo, "▼取引振り返り" %>
-    <%= form.text_area :exit_memo %>
+    <%= form.text_area :exit_memo, size: "70x5" %>
   </div>
 
   <div class"actions row">
-    <%= form.submit '作成', class: 'btn btn-primary btn-block btn-size' %>
+    <%= form.submit '作成', class: 'btn btn-primary' %>
   </div>
 <% end %>
