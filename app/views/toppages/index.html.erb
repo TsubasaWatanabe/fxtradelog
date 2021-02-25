@@ -2,6 +2,8 @@
   <div class="text-center">
     <h1>Welcome to the FX Trade Log</h1>
     <% unless logged_in? %>
+      <br>
+      <br>
       <%= link_to 'ユーザー新規登録', signup_path, class: 'btn btn-primary link-signup' %>
     <% end %>
 </div>
