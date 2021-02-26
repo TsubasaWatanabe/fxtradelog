@@ -48,7 +48,9 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: fxtradelog_production
   username: fxtradelog
   password: <%= ENV['FXTRADELOG_DATABASE_PASSWORD'] %>

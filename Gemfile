@@ -60,3 +60,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ページネーション用のgemを追加
 gem 'kaminari'
+
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end
