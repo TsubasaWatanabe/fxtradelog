@@ -25,6 +25,6 @@
 <ul>
   <% @trades.each do |trade| %>
     <% linkstr = trade.entry_datetime.to_s + '（' + trade.currency_pair.to_s + '）' %>
-    <li><%= link_to linkstr, trade_path() %></li>
+    <li><%= link_to linkstr, trade_path(trade.id) %></li>
   <% end %>
 </ul>
